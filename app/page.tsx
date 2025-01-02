@@ -20,7 +20,7 @@ export default function Home() {
             </code>
             .
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li>let's just see if this is my github now</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
