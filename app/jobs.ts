@@ -11,7 +11,7 @@ type Person = {
     firstContact: Date;
     latestContact: Date;
     nextSteps: string;
-    feelingFromCompany: "bad" | "normal" | "good" | "very good";
+    feelingFromCompany: "bad" | "okay" | "good" | "great";
     opinionOnOpportunity: string;
   };
   
@@ -53,7 +53,7 @@ type Person = {
       firstContact: new Date("2023-11-15"),
       latestContact: new Date("2023-12-18"),
       nextSteps: "Awaiting feedback after first round of interviews.",
-      feelingFromCompany: "normal",
+      feelingFromCompany: "okay",
       opinionOnOpportunity: "Good role, but I'm unsure about the company's growth trajectory."
     },
     {
@@ -69,7 +69,7 @@ type Person = {
       firstContact: new Date("2023-11-10"),
       latestContact: new Date("2023-11-22"),
       nextSteps: "Offer extended, awaiting response.",
-      feelingFromCompany: "very good",
+      feelingFromCompany: "great",
       opinionOnOpportunity: "Great potential for career growth and learning new technologies."
     },
     {
@@ -89,7 +89,7 @@ type Person = {
       firstContact: new Date("2023-11-30"),
       latestContact: new Date("2023-12-15"),
       nextSteps: "No immediate next steps. Awaiting updates on job opening.",
-      feelingFromCompany: "normal",
+      feelingFromCompany: "okay",
       opinionOnOpportunity: "Excited about the team but the role is a bit less creative than I'd hoped."
     },
     {
