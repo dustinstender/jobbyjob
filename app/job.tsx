@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 
 interface JobProps {
   name: string; // Company name
   logoUrl?: string; // Optional logo URL
   feelingFromCompany: 'bad' | 'okay' | 'good' | 'great'; // Feeling categories
   position: string; // Job position/title
+  setIsJobDetailsOpen: Dispatch<SetStateAction<boolean>>
+  
 }
 
-const Job: React.FC<JobProps> = ({ name, logoUrl, feelingFromCompany, position }) => {
+const Job: React.FC<JobProps> = ({ name, logoUrl, feelingFromCompany, position, setIsJobDetailsOpen }) => {
   // Map feelings to colors
   const feelingColors: Record<typeof feelingFromCompany, string> = {
     bad: 'bg-red-500',
@@ -17,8 +19,8 @@ const Job: React.FC<JobProps> = ({ name, logoUrl, feelingFromCompany, position }
   };
 
   return (
-    <div className="flex items-center p-4 bg-gray-800 shadow-lg rounded-lg max-w-sm">
-  <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center overflow-hidden mr-4">
+    <button className="flex items-center p-4 bg-gray-800 shadow-lg rounded-lg max-w-sm" onClick={() => setIsJobDetailsOpen(true)}>
+    <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center overflow-hidden mr-4">
     {logoUrl ? (
       <img
         src={logoUrl}
@@ -42,7 +44,7 @@ const Job: React.FC<JobProps> = ({ name, logoUrl, feelingFromCompany, position }
     </div>
     <span className="text-sm text-gray-400">{position}</span>  
   </div>
-</div>
+</button>
 
   );
 };
