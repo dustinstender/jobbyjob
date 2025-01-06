@@ -1,9 +1,9 @@
-type Person = {
+export type Person = {
     name: string;
     details: string;
   };
   
-  type Job = {
+  export type Job = {
     name: string;
     description: string;
     location: string;
@@ -13,6 +13,7 @@ type Person = {
     nextSteps: string;
     feelingFromCompany: "bad" | "okay" | "good" | "great";
     opinionOnOpportunity: string;
+    logoUrl?: string
   };
   
   export const jobs: Job[] = [
